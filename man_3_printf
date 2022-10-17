@@ -1,53 +1,35 @@
-.TH man 3 "29 Octobre 2019" "_printf man page"
-. SH NAME
-printf - prints the character(s)
+.TH _PRINTF "1" "10 JULY 2022" "0x11. C - printf"
+.SH NAME
+_printf - print data according to a format
 .SH SYNOPSIS
-#include "holberton.h"
-int _printf(const char *format, ...);
+.B printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Prints ARGUMENT(s) based on FORMAT
 
-## :books: DESCRIPTION :books:
+Format specifiers (beginning with %), the additional arguments following format are formatted and inserted.
 
-printf() functions are inbuilt library functions in C programming language which are available in C library by default. These functions are declared and related macros are defined in stdio.h which is a header file in C language.
-We have to include stdio.h file as shown in below C program to make use of these printf() and scanf() library functions in C language.
-In C programming language, printf() function used to print the character, string, float, integer, octal and hexadecimal values onto the output screen.
-We use printf() function with %d format specifier to display the value of an integer variable.
-Similarly %c is used to display character, %f for float variable, %s for string variable, %lf for double and %x for hexadecimal variable.
-To generate a newline,we use \n in C printf() statement.
+_printf will also take an indefinite amount of arguments.
 
-.RS 3
-c   prints a character variable
-.br
-s   prints a string variable
-.br
-d   prints an integer and takes an integer value as a signed decimal integer
-.br
-i   prints an integer and takes in a decimal, hexadecimal, or octal type
-.br
-b   prints a binary number
-.br
-u   prints an unsigned integer
-.br
-o   prints an octal number
-.br
-x   prints a hexadecimal number
-.br
-X   prints a hexadecimal number in caps
-.br
-.RE
+Example:
+_printf("%s", text);
 
-.SH RETURN
-The function will return the number of characters printed. If unsuccessful the function will return null.
-.SH EXAMPLES
-To print "Today is Tuesday" you would do as follow, where day is a pointer to a string:
+In the Example print the value of text with %s give the format of text.
 
- #include "Holberton.h"
- _printf("Today is %s", day);
+.B The conversion specifiers
 
-## :hash: Bot Twitter :hash:
+.IP %c
+- prints character.
+.IP %s
+- prints string.
+.IP %%
+- prints percentage symbol.
+.IP %d
+- prints decimal.
+.IP %i
+- prints integer number.
 
-* [@DouiriEddin](https://twitter.com/DouiriEddin)  
- * [@AfineSami](https://twitter.com/AfineSami)  
-### :email: mail :email:
-
-* [Lafine Sami](1124@holbertonschool.com) 
- * [Chems Eddin Douiri](1123@holbertonschool.com)
+.SH SEE ALSO
+.I printf (3)
+.SH AUTHOR
+Antonio Olabayo ( olabee100 )
+Matthew Kadewole ( Omoade )
