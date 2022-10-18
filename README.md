@@ -1,1 +1,1 @@
-Our Collaborated Project
+Collaborated Project
